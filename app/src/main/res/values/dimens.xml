@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="jarak_tepi">16dp</dimen>
+    <dimen name="jarak_tepi_negatif">-16dp</dimen>
+    <dimen name="jarak_antar_field">16dp</dimen>
+    <dimen name="jarak_antar_bagian">18dp</dimen>
+    <dimen name="jarak_dalam_kartu">16dp</dimen>
+    <dimen name="jarak_antar_kolom">10dp</dimen>
+    <dimen name="kartu_sudut">14dp</dimen>
+    <dimen name="item_sudut">11dp</dimen>
+    <dimen name="item_tinggi">78dp</dimen>
+    <dimen name="avatar_ukuran">40dp</dimen>
+    <dimen name="tombol_tinggi">44dp</dimen>
+    <dimen name="nomor_ukuran">19dp</dimen>
+    <dimen name="teks_judul_aplikasi">16sp</dimen>
+    <dimen name="teks_judul_bagian">13sp</dimen>
+    <dimen name="teks_isi">13sp</dimen>
+    <dimen name="teks_kecil">10sp</dimen>
+    <dimen name="teks_nilai_besar">30sp</dimen>
+</resources>

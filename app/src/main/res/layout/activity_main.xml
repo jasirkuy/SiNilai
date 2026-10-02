@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abu_latar"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tvJudulBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/biru_utama"
+            android:padding="@dimen/jarak_dalam_kartu"
+            android:text="@string/judul"
+            android:textColor="@color/putih"
+            android:textSize="@dimen/teks_judul_aplikasi"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvJudulSub"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/biru_utama"
+            android:paddingStart="@dimen/jarak_dalam_kartu"
+            android:paddingEnd="@dimen/jarak_dalam_kartu"
+            android:paddingBottom="@dimen/jarak_dalam_kartu"
+            android:text="@string/judul_sub"
+            android:textColor="@color/putih"
+            android:textSize="@dimen/teks_kecil"
+            app:layout_constraintEnd_toEndOf="@id/tvJudulBar"
+            app:layout_constraintStart_toStartOf="@id/tvJudulBar"
+            app:layout_constraintTop_toBottomOf="@id/tvJudulBar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentArea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/jarak_tepi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvJudulSub">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardForm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_antar_bagian"
+                app:cardBackgroundColor="@color/putih"
+                app:cardCornerRadius="@dimen/kartu_sudut"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/abu_garis_tepi"
+                app:strokeWidth="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/jarak_dalam_kartu">
+
+                    <TextView
+                        android:id="@+id/tvNomorBagian1"
+                        android:layout_width="@dimen/nomor_ukuran"
+                        android:layout_height="@dimen/nomor_ukuran"
+                        android:background="@drawable/bg_nomor_bagian"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/putih"
+                        android:textSize="@dimen/teks_kecil"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvJudulDataMahasiswa"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/judul_data_mahasiswa"
+                        android:textColor="@color/biru_utama"
+                        android:textSize="@dimen/teks_judul_bagian"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/tvNomorBagian1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvNomorBagian1"
+                        app:layout_constraintTop_toTopOf="@id/tvNomorBagian1" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilNama"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/jarak_antar_field"
+                        android:hint="@string/label_nama"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvNomorBagian1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName|textCapWords"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilNim"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/jarak_antar_field"
+                        android:layout_marginEnd="@dimen/jarak_antar_kolom"
+                        android:hint="@string/label_nim"
+                        app:helperText="@string/bantuan_nim"
+                        app:layout_constraintEnd_toStartOf="@id/tilProdi"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tilNama"
+                        app:layout_constraintWidth_percent="0.44">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNim"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilProdi"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:hint="@string/label_program_studi"
+                        app:layout_constraintBottom_toBottomOf="@id/tilNim"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tilNim"
+                        app:layout_constraintTop_toTopOf="@id/tilNim">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/acProdi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            tools:ignore="LabelFor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilMatkul"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/jarak_antar_field"
+                        android:hint="@string/label_mata_kuliah"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tilNim">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etMatkul"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tvNomorBagian2"
+                        android:layout_width="@dimen/nomor_ukuran"
+                        android:layout_height="@dimen/nomor_ukuran"
+                        android:layout_marginTop="@dimen/jarak_antar_bagian"
+                        android:background="@drawable/bg_nomor_bagian"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/putih"
+                        android:textSize="@dimen/teks_kecil"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tilMatkul" />
+
+                    <TextView
+                        android:id="@+id/tvJudulKomponenNilai"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/judul_komponen_nilai"
+                        android:textColor="@color/biru_utama"
+                        android:textSize="@dimen/teks_judul_bagian"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/tvNomorBagian2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvNomorBagian2"
+                        app:layout_constraintTop_toTopOf="@id/tvNomorBagian2" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilNilaiTugas"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/jarak_antar_field"
+                        android:layout_marginEnd="@dimen/jarak_antar_kolom"
+                        android:hint="@string/label_nilai_tugas"
+                        app:layout_constraintEnd_toStartOf="@id/tilBobotTugas"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvNomorBagian2"
+                        app:layout_constraintWidth_percent="0.6">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNilaiTugas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilBobotTugas"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:hint="@string/label_bobot"
+                        app:helperText="@string/bantuan_bobot"
+                        app:layout_constraintBottom_toBottomOf="@id/tilNilaiTugas"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tilNilaiTugas"
+                        app:layout_constraintTop_toTopOf="@id/tilNilaiTugas">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBobotTugas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilNilaiUts"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="@dimen/jarak_antar_kolom"
+                        android:hint="@string/label_nilai_uts"
+                        app:layout_constraintEnd_toStartOf="@id/tilBobotUts"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tilNilaiTugas"
+                        app:layout_constraintWidth_percent="0.6">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNilaiUts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilBobotUts"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/label_bobot"
+                        app:layout_constraintBottom_toBottomOf="@id/tilNilaiUts"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tilNilaiUts"
+                        app:layout_constraintTop_toTopOf="@id/tilNilaiUts">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBobotUts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilNilaiUas"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/jarak_antar_field"
+                        android:layout_marginEnd="@dimen/jarak_antar_kolom"
+                        android:hint="@string/label_nilai_uas"
+                        app:layout_constraintEnd_toStartOf="@id/tilBobotUas"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tilNilaiUts"
+                        app:layout_constraintWidth_percent="0.6">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNilaiUas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilBobotUas"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/label_bobot"
+                        app:layout_constraintBottom_toBottomOf="@id/tilNilaiUas"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tilNilaiUas"
+                        app:layout_constraintTop_toTopOf="@id/tilNilaiUas">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBobotUas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSimpan"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/tombol_tinggi"
+                        android:layout_marginTop="@dimen/jarak_antar_bagian"
+                        android:text="@string/btn_simpan_nilai"
+                        android:textSize="@dimen/teks_isi"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tilNilaiUas" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnBersihkan"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/tombol_tinggi"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/btn_bersihkan"
+                        android:textSize="@dimen/teks_isi"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/btnSimpan" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPratinjau"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_antar_bagian"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/biru_muda"
+                app:cardCornerRadius="@dimen/kartu_sudut"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardForm"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/jarak_dalam_kartu">
+
+                    <TextView
+                        android:id="@+id/tvJudulPratinjau"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/judul_pratinjau"
+                        android:textColor="@color/biru_utama"
+                        android:textSize="@dimen/teks_judul_bagian"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvNilaiAkhir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/hitam_teks"
+                        android:textSize="@dimen/teks_nilai_besar"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvJudulPratinjau"
+                        tools:text="81.60" />
+
+                    <TextView
+                        android:id="@+id/tvHurufMutu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_huruf_mutu"
+                        android:gravity="center"
+                        android:minWidth="26dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/putih"
+                        android:textSize="@dimen/teks_isi"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/tvNilaiAkhir"
+                        app:layout_constraintStart_toEndOf="@id/tvNilaiAkhir"
+                        app:layout_constraintTop_toTopOf="@id/tvNilaiAkhir"
+                        android:layout_marginStart="8dp"
+                        tools:text="B" />
+
+                    <TextView
+                        android:id="@+id/tvStatusLulus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/bg_chip_hijau"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/hijau_sukses"
+                        android:textSize="@dimen/teks_kecil"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvNilaiAkhir"
+                        tools:text="LULUS" />
+
+                    <TextView
+                        android:id="@+id/tvLabelBobotAngka"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/label_bobot_angka"
+                        android:textColor="@color/abu_teks"
+                        android:textSize="@dimen/teks_kecil"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvStatusLulus" />
+
+                    <TextView
+                        android:id="@+id/tvBobotAngka"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/hitam_teks"
+                        android:textSize="@dimen/teks_isi"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvLabelBobotAngka"
+                        tools:text="3.00" />
+
+                    <TextView
+                        android:id="@+id/tvLabelPredikat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/label_predikat"
+                        android:textColor="@color/abu_teks"
+                        android:textSize="@dimen/teks_kecil"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvStatusLulus" />
+
+                    <TextView
+                        android:id="@+id/tvPredikat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/hitam_teks"
+                        android:textSize="@dimen/teks_isi"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvLabelPredikat"
+                        tools:text="Baik" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/cardKosong"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_antar_bagian"
+                android:background="@drawable/bg_kotak_kosong"
+                android:gravity="center"
+                android:padding="@dimen/jarak_dalam_kartu"
+                android:text="@string/placeholder_pratinjau"
+                android:textColor="@color/abu_teks"
+                android:textSize="@dimen/teks_kecil"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardForm" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierPratinjau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="cardPratinjau,cardKosong" />
+
+            <TextView
+                android:id="@+id/tvNomorBagian3"
+                android:layout_width="@dimen/nomor_ukuran"
+                android:layout_height="@dimen/nomor_ukuran"
+                android:layout_marginTop="@dimen/jarak_antar_bagian"
+                android:background="@drawable/bg_nomor_bagian"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/teks_kecil"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrierPratinjau" />
+
+            <TextView
+                android:id="@+id/tvJudulDataTersimpan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/judul_data_tersimpan"
+                android:textColor="@color/biru_utama"
+                android:textSize="@dimen/teks_judul_bagian"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tvNomorBagian3"
+                app:layout_constraintEnd_toStartOf="@id/tvJumlahData"
+                app:layout_constraintStart_toEndOf="@id/tvNomorBagian3"
+                app:layout_constraintTop_toTopOf="@id/tvNomorBagian3" />
+
+            <TextView
+                android:id="@+id/tvJumlahData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/abu_teks"
+                android:textSize="@dimen/teks_kecil"
+                app:layout_constraintBottom_toBottomOf="@id/tvNomorBagian3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvNomorBagian3"
+                tools:text="2 data" />
+
+            <include
+                android:id="@+id/itemPertama"
+                layout="@layout/item_nilai"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_antar_kolom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNomorBagian3" />
+
+            <include
+                android:id="@+id/itemKedua"
+                layout="@layout/item_nilai"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_antar_kolom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemPertama" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

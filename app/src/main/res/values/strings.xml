@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">SiNilai</string>
+    <string name="judul">SiNilai</string>
+    <string name="judul_sub">Input Nilai Mahasiswa</string>
+    <string name="judul_data_mahasiswa">Data Mahasiswa</string>
+    <string name="judul_komponen_nilai">Komponen Nilai</string>
+    <string name="judul_data_tersimpan">Data Tersimpan</string>
+    <string name="label_nama">Nama Lengkap</string>
+    <string name="label_nim">NIM</string>
+    <string name="label_program_studi">Program Studi</string>
+    <string name="label_mata_kuliah">Mata Kuliah</string>
+    <string name="label_nilai_tugas">Nilai Tugas</string>
+    <string name="label_nilai_uts">Nilai UTS</string>
+    <string name="label_nilai_uas">Nilai UAS</string>
+    <string name="label_bobot">Bobot %</string>
+    <string name="btn_simpan_nilai">Simpan Nilai</string>
+    <string name="btn_bersihkan">Bersihkan</string>
+    <string name="bantuan_nim">7 digit</string>
+    <string name="bantuan_bobot">total 100</string>
+    <string name="deskripsi_avatar">Avatar inisial mahasiswa</string>
+
+    <string name="judul_pratinjau">Pratinjau Hasil</string>
+    <string name="label_bobot_angka">Bobot angka</string>
+    <string name="label_predikat">Predikat</string>
+    <string name="status_lulus">LULUS</string>
+    <string name="status_tidak_lulus">TIDAK LULUS</string>
+    <string name="placeholder_pratinjau">Pratinjau hasil akan muncul setelah nilai dihitung</string>
+
+    <string name="error_nama_kosong">Nama tidak boleh kosong</string>
+    <string name="error_nama_pendek">Nama minimal 3 karakter</string>
+    <string name="error_nim_kosong">NIM tidak boleh kosong</string>
+    <string name="error_nim_format">NIM harus 7 digit</string>
+    <string name="error_prodi_kosong">Program studi belum dipilih</string>
+    <string name="error_matkul_kosong">Mata kuliah tidak boleh kosong</string>
+    <string name="error_nilai_kosong">Nilai tidak boleh kosong</string>
+    <string name="error_nilai_rentang">Nilai harus 0 sampai 100</string>
+    <string name="error_bobot_kosong">Bobot tidak boleh kosong</string>
+    <string name="error_bobot_nol">Bobot harus lebih besar dari 0</string>
+    <string name="error_total_bobot">Total bobot belum 100</string>
+
+    <string name="pesan_berhasil_dihitung">Nilai berhasil dihitung</string>
+    <string name="pesan_dibersihkan">Formulir telah dibersihkan</string>
+
+    <string name="format_jumlah_data">%1$d data</string>
+    <string name="format_total_bobot">Total baru %1$d</string>
+    <string name="format_gagal">Lengkapi %1$d kolom yang bertanda merah</string>
+    <string name="format_nim_matkul">%1$s | %2$s</string>
+
+    <string-array name="daftar_prodi">
+        <item>Teknologi Rekayasa Perangkat Lunak</item>
+        <item>Teknologi Rekaysa Geomatika dan Survei</item>
+        <item>Sistem Informasi Akuntansi</item>
+        <item>Teknologi Geomatika</item>
+    </string-array>
+</resources>

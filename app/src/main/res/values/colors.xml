@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hitam">#FF000000</color>\
+    <color name="putih">#FFFFFFFF</color>
+    <color name="biru_utama">#FF1565C0</color>
+    <color name="biru_muda">#FFE3F2FD</color>
+    <color name="abu_latar">#FFF2F5F9</color>
+    <color name="abu_garis_tepi">#FFE1E7ED</color>
+    <color name="abu_teks">#FF616161</color>
+    <color name="hitam_teks">#FF1A1A1A</color>
+    <color name="merah_error">#FFC62828</color>
+    <color name="hijau_sukses">#FF2E7D32</color>
+    <color name="hijau_muda">#FFE8F5EC</color>
+    <color name="merah_muda">#FFFDECEA</color>
+</resources>

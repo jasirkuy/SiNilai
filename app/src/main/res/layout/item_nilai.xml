@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardItem"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_tinggi"
+    app:cardBackgroundColor="@color/putih"
+    app:cardCornerRadius="@dimen/item_sudut"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/abu_garis_tepi"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/jarak_dalam_kartu">
+
+        <TextView
+            android:id="@+id/tvInisial"
+            android:layout_width="@dimen/avatar_ukuran"
+            android:layout_height="@dimen/avatar_ukuran"
+            android:background="@drawable/bg_lingkaran_biru"
+            android:contentDescription="@string/deskripsi_avatar"
+            android:gravity="center"
+            android:textColor="@color/putih"
+            android:textSize="@dimen/teks_isi"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="AP"/>
+
+        <TextView
+            android:id="@+id/tvNama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/jarak_antar_kolom"
+            android:layout_marginEnd="@dimen/jarak_antar_kolom"
+            android:textColor="@color/hitam_teks"
+            android:textSize="@dimen/teks_isi"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvNilaiAkhir"
+            app:layout_constraintStart_toEndOf="@+id/tvInisial"
+            app:layout_constraintTop_toTopOf="@+id/tvInisial"
+            tools:text="Andi Pratama"/>
+
+        <TextView
+            android:id="@+id/tvNimMatkul"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/hitam_teks"
+            android:textSize="@dimen/teks_kecil"
+            app:layout_constraintEnd_toEndOf="@+id/tvNama"
+            app:layout_constraintStart_toStartOf="@+id/tvNama"
+            app:layout_constraintTop_toBottomOf="@+id/tvNama"
+            tools:text="2024001 | PPB"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_chip_hijau"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/hijau_sukses"
+            android:textSize="@dimen/teks_kecil"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvNama"
+            app:layout_constraintTop_toBottomOf="@id/tvNimMatkul"
+            tools:text="LULUS" />
+
+        <TextView
+            android:id="@+id/tvNilaiAkhir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/biru_utama"
+            android:textSize="@dimen/teks_nilai_besar"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="81.60" />
+
+        <TextView
+            android:id="@+id/tvHurufMutu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_huruf_mutu"
+            android:gravity="center"
+            android:minWidth="26dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/putih"
+            android:textSize="@dimen/teks_isi"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="B" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
